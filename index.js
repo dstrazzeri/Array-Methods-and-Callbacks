@@ -99,13 +99,13 @@ Use the higher order function getAverageGoals to do the following:
  Example of invocation: getAverageGoals(getFinals(fifaData));
 */
 
-function getAverageGoals(arr, getFinalscb) {
-//    const finals = getFinalscb;
-//    const totalGoals = finals.reduce(function(acc, final){
-//        const totalGoalsThisGame = (final['Home Team Goals'] + final['Away Team Goals'])
-//        return acc + totalGoalsThisGame}, 0);
-//        const answer = (totalGoals / finals.length).toFixed(2);
-//        return answer;
+function getAverageGoals(getFinals) {
+   const finals = getFinals;
+   const totalGoals = finals.reduce(function(acc, final){
+       const totalGoalsThisGame = (final['Home Team Goals'] + final['Away Team Goals'])
+       return acc + totalGoalsThisGame}, 0);
+       const answer = (totalGoals / finals.length).toFixed(2);
+       return answer;
    }
 
 console.log(getAverageGoals(getFinals(fifaData)));
